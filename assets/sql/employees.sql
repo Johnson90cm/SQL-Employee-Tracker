@@ -10,12 +10,14 @@ CREATE TABLE department ();
 
 CREATE TABLE employee ();
 
+-- department values
 VALUES
     ('Management'),
     ('Chemistry'),
     ('Software Engineering'),
     ('Mechanical Engineering');
 
+-- role values
 VALUES
     ('CEO', 1000000, 1),
     ('Project Director', 750000, 1),
@@ -28,6 +30,7 @@ VALUES
     ('Junior Chemist', 100000, 3),
     ('Senior Chemist', 250000, 3);
 
+-- employee values
 VALUES
     ('Ronald', 'Firbank', 1, 1),
     ('Virginia', 'Woolf', 1, 1),

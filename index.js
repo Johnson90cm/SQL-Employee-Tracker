@@ -1,7 +1,9 @@
+// requirements
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 const Choices = require('inquirer/lib/objects/choices');
 
+// connect to local host
 const connection = mysql.createConnection({
     host: 'localhost',
 
@@ -14,6 +16,7 @@ const connection = mysql.createConnection({
     database: 'employees'
 });
 
+// store questions to keep inquirer function clean
 const questions = {
     viewEmployees: "View Employees",
     viewDepartments: "View By Department",
@@ -25,6 +28,7 @@ const questions = {
     exit: "Exit"
 };
 
+// inquirer pormpts
 function prompt() {
     inquirer
         .prompt({
@@ -40,7 +44,7 @@ function prompt() {
         })
 }
 
-
+// functions
 function createName() { }
 
 function addEmployee() { }
