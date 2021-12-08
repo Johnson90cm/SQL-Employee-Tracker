@@ -40,7 +40,14 @@ function prompt() {
             type: 'list',
             message: 'Select an Action',
             choices: [
-
+                questions.viewEmployees,
+                questions.viewDepartments,
+                questions.viewByManager,
+                questions.addEmployee,
+                questions.removeEmployee,
+                questions.changeRole,
+                questions.viewRoles,
+                questions.exit
             ]
         })
         .then(answer => {
