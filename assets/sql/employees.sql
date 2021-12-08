@@ -1,14 +1,15 @@
+-- drop DB and create new DB
 DROP DATABASE IF EXISTS employees;
-
 CREATE DATABASE employees;
 
+-- use employees DB
 USE employees;
 
+-- employee tables
 CREATE TABLE employee ();
 
+-- department tables
 CREATE TABLE department ();
-
-CREATE TABLE employee ();
 
 -- department values
 VALUES
