@@ -14,7 +14,11 @@ const connection = mysql.createConnection({
     password: 'johnson90',
 
     database: 'employees'
-});
+})
+connection.connect(err => {
+    if (err) throw err;
+    prompt();
+})
 
 // store questions to keep inquirer function clean
 const questions = {
