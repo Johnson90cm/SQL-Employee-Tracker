@@ -1,6 +1,8 @@
 // requirements
 const mysql = require('mysql');
 const inquirer = require('inquirer');
+
+// not sure what this is
 const Choices = require('inquirer/lib/objects/choices');
 
 // connect to local host
