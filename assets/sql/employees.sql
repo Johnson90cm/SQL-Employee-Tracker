@@ -1,45 +1,67 @@
--- drop DB and create new DB
 DROP DATABASE IF EXISTS employees;
+
 CREATE DATABASE employees;
 
--- use employees DB
 USE employees;
 
--- employee tables
-CREATE TABLE employee ();
+CREATE TABLE department (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) UNIQUE NOT NULL
+);
 
--- department tables
-CREATE TABLE department ();
+CREATE TABLE role (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(30) UNIQUE NOT NULL,
+    salary DECIMAL UNSIGNED NOT NULL,
+    department_id INT UNSIGNED NOT NULL,
+    INDEX dep_ind (department_id),
+    CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE
+);
 
--- department values
+CREATE TABLE employee (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    role_id INT UNSIGNED NOT NULL,
+    INDEX role_ind (role_id),
+    CONSTRAINT fk_role FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE,
+    manager_id INT UNSIGNED,
+    INDEX man_ind (manager_id),
+    CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE
+    SET
+        NULL
+);
+
+use employees;
+
+INSERT INTO
+    department (name)
 VALUES
-    ('Management'),
-    ('Chemistry'),
-    ('Software Engineering'),
-    ('Mechanical Engineering');
+    ('Operations'),
+    ('Analystics'),
+    ('Marketing'),
+    ('Executive');
 
--- role values
+INSERT INTO
+    role (title, salary, department_id)
 VALUES
-    ('CEO', 1000000, 1),
-    ('Project Director', 750000, 1),
-    ('VP: Engineering', 500000, 2),
-    ('VP: Chemistry', 500000, 3),
-    ('Junior Software Engineer', 100000, 2),
-    ('Senior Software Engineer', 250000, 2),
-    ('Junior Mechanical Engineer', 100000, 2),
-    ('Senior Mechanical Engineer', 250000, 2),
-    ('Junior Chemist', 100000, 3),
-    ('Senior Chemist', 250000, 3);
+    ('PRESIDENT', 11000000, 1),
+    ('CEO', 4000000, 1),
+    ('BOARD OF DIRECTORS', 15000000, 2),
+    ('GENERAL MANAGER', 8000000, 2),
+    ('ASSISTANT', 7000000, 3),
+    ('TECHNITION', 3000000, 3),
+    ('ENGINEER', 45000000, 4),
+    ('ASSOCIATE', 25000000, 4);
 
--- employee values
+INSERT INTO
+    employee (first_name, last_name, role_id, manager_id)
 VALUES
-    ('Ronald', 'Firbank', 1, 1),
-    ('Virginia', 'Woolf', 1, 1),
-    ('Piers', 'Gaveston', 1, 0),
-    ('Charles', 'LeRoi', 2, 1),
-    ('Katherine', 'Mansfield', 2, 1),
-    ('Dora', 'Carrington', 3, 0),
-    ('Edward', 'Bellamy', 3, 0),
-    ('Montague', 'Summers', 3, 1),
-    ('Octavia', 'Butler', 3, 1),
-    ('Unica', 'Zurn', NULL, 1);
+    ('Bilbo', 'Baggins', 1, NULL),
+    ('Frodo', 'Baggins', 2, 1),
+    ('Gandalf', 'The Grey', 1, NULL),
+    ('Pippin', 'Took', 4, 3),
+    ('Samwise', 'Gamgee', 5, NULL),
+    ('Gary', 'Peyton', 6, 5),
+    ('Merry', 'Brandybuck', 7, NULL),
+    ('Rosie', 'Cotton', 8, 7);
