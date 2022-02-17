@@ -45,14 +45,14 @@ VALUES
 INSERT INTO
     role (title, salary, department_id)
 VALUES
-    ('PRESIDENT', 11000000, 1),
-    ('CEO', 4000000, 1),
-    ('BOARD OF DIRECTORS', 15000000, 2),
-    ('GENERAL MANAGER', 8000000, 2),
-    ('ASSISTANT', 7000000, 3),
-    ('TECHNITION', 3000000, 3),
-    ('ENGINEER', 45000000, 4),
-    ('ASSOCIATE', 25000000, 4);
+    ('PRESIDENT', 5000000, 1),
+    ('CEO', 1000000, 1),
+    ('BOARD OF DIRECTORS', 9000000, 2),
+    ('GENERAL MANAGER', 200000, 2),
+    ('ASSISTANT', 65000, 3),
+    ('TECHNITION', 75000, 3),
+    ('ENGINEER', 150000, 4),
+    ('ASSOCIATE', 50000, 4);
 
 INSERT INTO
     employee (first_name, last_name, role_id, manager_id)

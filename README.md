@@ -40,17 +40,15 @@ Prompts you will see when using this application
 * node index.js
 
 ## Dependencies
-  "dependencies": {
-    "console.table": "^0.10.0",
-    "init": "^0.1.2",
-    "inquirer": "^8.2.0",
-    "mysql": "^2.18.1"
-  }
+
+"console.table": "^0.10.0",
+"init": "^0.1.2",
+"inquirer": "^8.2.0",
+"mysql": "^2.18.1"
+
 
 ## Technologies
 * JavaScript
-* jQuery
-* ES6+
 * Node.js
 * MySQL
 
