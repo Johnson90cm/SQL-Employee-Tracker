@@ -1,6 +1,6 @@
 # MySQL-Employee-Tracker
 
-MySQL-Employee-Tracker is an interface command program that make it easy for non-developers to view and interact with information stored in databases. This interface is a good example of a Content Management Systems; a command line application for managing a company's employees using node, inquirer, and MySQL.
+This Application allows the user to manage A database of employees records regarding Role, Wage, and Direct Reports.
 
 ## User Story
 As a business owner
@@ -9,13 +9,11 @@ So that I can organize and plan my business
 
 ## Design
 
-This application follows the database shcema containing three variables:
-
-![](image/schema.PNG)
+![](schema.PNG)
 
 ## About
 
-Application tree structure: The application is user friendly and built to handle large amount of data (ie: what if the company have about 10,000 employees and 1,000+ roles)
+Prompts you will see when using this application
 
 * View All Employees - command that prints all employees in a table. Table contains employee id, employee name, title, department, salary and employee manager.
 
@@ -31,7 +29,7 @@ Application tree structure: The application is user friendly and built to handle
 
 * Update Employee Role - command line that updates the role/ title of an employee.
 
-## Install
+## Installation
 * npm i - to install all file in order for npm to work
 * npm i inquirer - to use inquirer (to interact with the user via command line)
 * npm init - to create a json file
@@ -44,7 +42,7 @@ Application tree structure: The application is user friendly and built to handle
 ## Dependencies
 ![](image/dep.PNG)
 
-## Built with
+## Technologies
 * JavaScript
 * jQuery
 * ES6+
