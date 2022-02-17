@@ -41,10 +41,10 @@ Prompts you will see when using this application
 
 ## Dependencies
 
-"console.table": "^0.10.0",
-"init": "^0.1.2",
-"inquirer": "^8.2.0",
-"mysql": "^2.18.1"
+* "console.table": "^0.10.0",
+* "init": "^0.1.2",
+* "inquirer": "^8.2.0",
+* "mysql": "^2.18.1"
 
 
 ## Technologies
