@@ -9,7 +9,7 @@ So that I can organize and plan my business
 
 ## Design
 
-![](schema.PNG)
+![](schema.png)
 
 ## About
 
@@ -40,7 +40,12 @@ Prompts you will see when using this application
 * node index.js
 
 ## Dependencies
-![](image/dep.PNG)
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "init": "^0.1.2",
+    "inquirer": "^8.2.0",
+    "mysql": "^2.18.1"
+  }
 
 ## Technologies
 * JavaScript
@@ -50,6 +55,7 @@ Prompts you will see when using this application
 * MySQL
 
 ## Demo
+
 
 ## License
 MIT
