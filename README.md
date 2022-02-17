@@ -2,32 +2,23 @@
 
 This Application allows the user to manage A database of employees records regarding Role, Wage, and Direct Reports.
 
-## User Story
-As a business owner
-I want to be able to view and manage the departments, roles, and employees in my company
-So that I can organize and plan my business
-
-## Design
-
-![](schema.png)
-
 ## About
 
-Prompts you will see when using this application
+Prompts you will see when using this application.
 
-* View All Employees - command that prints all employees in a table. Table contains employee id, employee name, title, department, salary and employee manager.
+* View All Employees - Displays all employees in a table. Table contains employee id, employee name, title, department, salary and employee manager.
 
-* View All Employees By Manager - command that prints all employee managers and their associates.
+* View All Employees By Manager - Displays all employee managers and their associates.
 
-* View All Employees By Department - command that prints all departments and the employee under it.
+* View All Employees By Department - Displays all departments and the employee under it.
 
-* View All Roles - command that prints all roles/ title and the corresponding employee.
+* View All Roles - command that Displays all roles/ title and the corresponding employee.
 
-* Add An Employee - command line that adds a new entry to the database.
+* Add An Employee - Adds a new entry to the database.
 
-* Remove An Employee - command line that deletes an employee from the database
+* Remove An Employee - Deletes an employee from the database
 
-* Update Employee Role - command line that updates the role/ title of an employee.
+* Update Employee Role - Updates the role/ title of an employee.
 
 ## Installation
 * npm i - to install all file in order for npm to work
@@ -39,6 +30,13 @@ Prompts you will see when using this application
 ## Run 
 * node index.js
 
+## Design
+
+![](schema.png)
+
+## Demo
+
+
 ## Dependencies
 
 * "console.table": "^0.10.0",
@@ -46,14 +44,10 @@ Prompts you will see when using this application
 * "inquirer": "^8.2.0",
 * "mysql": "^2.18.1"
 
-
 ## Technologies
 * JavaScript
 * Node.js
 * MySQL
-
-## Demo
-
 
 ## License
 MIT
